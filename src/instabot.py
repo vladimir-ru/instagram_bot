@@ -99,14 +99,11 @@ def create_account():  # create new instagram account or email account
             word_num = alp[random.randint(0, int(len(alp) - 1))]
             return word_num
 
-        end_word = ''
+        end_word = 'pgang'
         cou = 0
         full = int(random.randint(8, 12))
         while cou != full:
-            if cou == 4:
-                end_word += 'var_pol'
-
-            elif random.randint(0, 4) == 0:
+            if random.randint(0, 4) == 0:
                 end_word += str(rand_word(lis_alp)).upper()
             else:
                 end_word += str(rand_word(lis_alp))
@@ -115,7 +112,7 @@ def create_account():  # create new instagram account or email account
 
     need_mail = str(input('Do you want to create mail account? \n(y/n)'))
     if need_mail == 'y':
-        time.sleep(4)
+        time.sleep(2)
         create_mail()
     accounts = int(input('How many accounts do you want to create? '))
     auto = str(input('Do you want to automatic create?\n(y/n) '))
@@ -123,7 +120,7 @@ def create_account():  # create new instagram account or email account
     counter = 0
     while counter != accounts:
         browser = webdriver.Chrome('../chromedriver/chromedriver')
-        time.sleep(5)
+        time.sleep(1)
         mail = rand_mail()
         if auto == 'n':
             while True:
@@ -139,7 +136,7 @@ def create_account():  # create new instagram account or email account
             password = new_full_name_or_password()
 
         browser.get('https://www.instagram.com/')
-        time.sleep(5)
+        time.sleep(2)
         browser.find_element_by_xpath('//section/main/article/div[2]/div[1]/div/form/div[3]/div/label/input').send_keys(
             mail)
         browser.find_element_by_xpath('//section/main/article/div[2]/div[1]/div/form/div[4]/div/label/input').send_keys(
@@ -163,16 +160,31 @@ def create_account():  # create new instagram account or email account
 
 
 def main_bot():  # main bot's code
-    cou = 0
+    ##############
+    def go_follow(link):
+        browser.get(link)
+        time.sleep(0.5)
+        pyautogui.click(578, 315)
+
+    ##############
+
     file = open('bots_log.txt', 'r')
     now_bot_info = file.read().split('\n')
-    pas_login = now_bot_info[0].split(', ')
-    while cou != int(len(now_bot_info)):
+    print(f"Now we are having {len(now_bot_info)} bots.")
+    while True:
+        bots = int(input('How many bots do you need?\n'))
+        if bots <= int(len(now_bot_info)):
+            break
+    need = int(input('1 - New followers.\n'))
+    input_link = str(input('Your link.\n'))
+    cou = 0
+
+    while cou != bots:
         pas_login = now_bot_info[cou].split(', ')
         browser = webdriver.Chrome('../chromedriver/chromedriver')
         # login and go follow
         browser.get('https://www.instagram.com/accounts/login/?source=auth_switcher')
-        time.sleep(7)
+        time.sleep(2)
         browser.find_element_by_xpath(
             '//section/main/div/article/div/div[1]/div/form/div[2]/div/label/input').send_keys(
             pas_login[1])
@@ -180,20 +192,19 @@ def main_bot():  # main bot's code
             '//section/main/div/article/div/div[1]/div/form/div[3]/div/label/input').send_keys(
             pas_login[0])
         browser.find_element_by_xpath('//section/main/div/article/div/div[1]/div/form/div[4]/button').click()
-        time.sleep(5)
-        browser.get('https://www.instagram.com/var_poltos/')
-        time.sleep(10)
-        pyautogui.click(578, 315)
+        time.sleep(2)
+        if need == 1:
+            go_follow(input_link)
         cou += 1
-        time.sleep(15)
         browser.close()
+
     file.close()
 
 
 #######################
 #   input questions   #
 #######################
-main_quest = int(input("1 - Create instagram account.\n2 - Main bot's code."))
+main_quest = int(input("1 - Create instagram account.\n2 - Main bot's code.\n"))
 if main_quest == 1:
     create_account()
 elif main_quest == 2:

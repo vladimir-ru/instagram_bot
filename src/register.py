@@ -21,7 +21,7 @@ def create_mail():
         pyautogui.click(i[0], i[1])
     browser.find_element_by_xpath('//div/div/div/div[1]/div[3]/form/div[6]/div/div[2]/div[1]/div/div[1]/span[3]/input').send_keys(account_name)
     s_cor = [[514, 646], [501, 719]]
-    time.sleep(2)
+    time.sleep(0.5)
     for i in s_cor:
         pyautogui.click(i[0], i[1])
         pyautogui.typewrite(password)
@@ -100,7 +100,7 @@ def new_username():
 
 need_mail = str(input('Do you want to create mail account? \n(y/n)'))
 if need_mail == 'y':
-    time.sleep(4)
+    time.sleep(1)
     create_mail()
 accounts = int(input('How many accounts do you want to create? '))
 auto = str(input('Do you want to automatic create?\n(y/n) '))
