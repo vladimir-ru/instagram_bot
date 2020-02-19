@@ -11,11 +11,19 @@ import time
 from selenium import webdriver
 
 if __name__ == '__main__':
-    print('===================\n####PYTHON GANG####\n##instabot v0.001##\n===================')
+    print('===================\n####PYTHON GANG####\n##instabot   v0.1##\n===================')
 
 
 def create_account():  # create new instagram account or email account
     global full_name, username, password
+
+    def xpath_exception(url):
+        try:
+            browser.find_element_by_xpath(url)
+            existence = 1
+        except NoSuchElementException:
+            existence = 0
+        return existence
 
     def create_mail():
         browser = webdriver.Chrome('../chromedriver/chromedriver')
@@ -38,7 +46,7 @@ def create_account():  # create new instagram account or email account
             '//div/div/div/div[1]/div[3]/form/div[6]/div/div[2]/div[1]/div/div[1]/span[3]/input').send_keys(
             account_name)
         s_cor = [[514, 646], [501, 719]]
-        time.sleep(2)
+        time.sleep(0.5)
         for i in s_cor:
             pyautogui.click(i[0], i[1])
             pyautogui.typewrite(password)
@@ -79,7 +87,7 @@ def create_account():  # create new instagram account or email account
             word_num = alp[random.randint(0, int(len(alp) - 1))]
             return word_num
 
-        end_word = 'vova'
+        end_word = 'pythongang'
         cou = 0
         full = int(random.randint(5, 9))
         while cou != full:
@@ -88,7 +96,7 @@ def create_account():  # create new instagram account or email account
             else:
                 end_word += str(rand_word(lis_alp))
             cou += 1
-        end_word += '@kiq.kr'
+        end_word += '@kiq.ru'
         return end_word
 
     def new_username():
@@ -100,11 +108,14 @@ def create_account():  # create new instagram account or email account
             word_num = alp[random.randint(0, int(len(alp) - 1))]
             return word_num
 
-        end_word = 'pgang'
+        end_word = 'pythongang'
         cou = 0
-        full = int(random.randint(8, 12))
+        full = int(random.randint(4, 7))
         while cou != full:
-            if random.randint(0, 4) == 0:
+            if cou == 4:
+                end_word += 'var_pol'
+
+            elif random.randint(0, 4) == 0:
                 end_word += str(rand_word(lis_alp)).upper()
             else:
                 end_word += str(rand_word(lis_alp))
@@ -113,7 +124,7 @@ def create_account():  # create new instagram account or email account
 
     need_mail = str(input('Do you want to create mail account? \n(y/n)'))
     if need_mail == 'y':
-        time.sleep(2)
+        time.sleep(1)
         create_mail()
     accounts = int(input('How many accounts do you want to create? '))
     auto = str(input('Do you want to automatic create?\n(y/n) '))
@@ -121,7 +132,7 @@ def create_account():  # create new instagram account or email account
     counter = 0
     while counter != accounts:
         browser = webdriver.Chrome('../chromedriver/chromedriver')
-        time.sleep(1)
+        time.sleep(5)
         mail = rand_mail()
         if auto == 'n':
             while True:
@@ -137,7 +148,7 @@ def create_account():  # create new instagram account or email account
             password = new_full_name_or_password()
 
         browser.get('https://www.instagram.com/')
-        time.sleep(2)
+        time.sleep(5)
         browser.find_element_by_xpath('//section/main/article/div[2]/div[1]/div/form/div[3]/div/label/input').send_keys(
             mail)
         browser.find_element_by_xpath('//section/main/article/div[2]/div[1]/div/form/div[4]/div/label/input').send_keys(
@@ -158,6 +169,7 @@ def create_account():  # create new instagram account or email account
             file.close()
         else:
             print(f'Good, you created {counter} account!')
+        browser.quit()
 
 
 def main_bot():  # main bot's code
@@ -168,11 +180,12 @@ def main_bot():  # main bot's code
             existence = 1
         except NoSuchElementException:
             existence = 0
+        return existence
 
     def go_follow(link):
         browser.get(link)
         time.sleep(0.5)
-        pyautogui.click(578, 315)
+        pyautogui.click(607, 315)
 
     def page(link):
         browser.get(link)
@@ -193,7 +206,7 @@ def main_bot():  # main bot's code
             time.sleep(0.1)
             file = open('resp.txt', 'r')
             lis = file.read().split('\n')
-            rand = random.randint(0, int(len(lis)-1))
+            rand = random.randint(0, int(len(lis) - 1))
             resp = lis[int(rand)]
             browser.find_element_by_xpath(
                 '//section/main/div/div/article/div[2]/section[3]/div/form/textarea').send_keys(
@@ -202,6 +215,8 @@ def main_bot():  # main bot's code
             time.sleep(0.3)
             browser.find_element_by_xpath('//section/main/div/div/article/div[2]/section[3]/div/form/button').click()
             f_cou += 1
+            time.sleep(1)
+            browser.get(link)
 
     ##############
 
@@ -216,7 +231,7 @@ def main_bot():  # main bot's code
     input_link = str(input('Your link.\n'))
     cou = 0
 
-    while cou != bots:
+    while cou != (bots - 1):
         pas_login = now_bot_info[cou].split(', ')
         browser = webdriver.Chrome('../chromedriver/chromedriver')
         # login and go follow

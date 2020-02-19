@@ -7,7 +7,8 @@
       <change beforePath="$PROJECT_DIR$/src/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/go_follow.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/go_follow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instabot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/instabot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resp.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,10 +63,14 @@
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="92" y="122" width="1182" height="554" key="DiffContextDialog/0.30.1366.738@0.30.1366.738" timestamp="1582055442073" />
-    <state x="379" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1582062840484">
+    <state x="463" y="155" key="FileChooserDialogImpl" timestamp="1582127177255">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="379" y="224" key="com.intellij.ide.util.TipDialog/0.30.1366.738@0.30.1366.738" timestamp="1582062840484" />
+    <state x="463" y="155" key="FileChooserDialogImpl/0.30.1366.738@0.30.1366.738" timestamp="1582127177255" />
+    <state x="379" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1582127166978">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="379" y="224" key="com.intellij.ide.util.TipDialog/0.30.1366.738@0.30.1366.738" timestamp="1582127166978" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582012640458">
       <screen x="0" y="30" width="1366" height="738" />
     </state>

@@ -13,6 +13,7 @@ def xpath_exception(url):
         existence = 1
     except NoSuchElementException:
         existence = 0
+    return existence
 
 
 def go_follow(link):

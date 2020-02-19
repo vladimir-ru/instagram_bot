@@ -2,6 +2,16 @@ import random
 import pyautogui
 import time
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
+
+
+def xpath_exception(url):
+    try:
+        browser.find_element_by_xpath(url)
+        existence = 1
+    except NoSuchElementException:
+        existence = 0
+    return existence
 
 
 def create_mail():
@@ -62,7 +72,7 @@ def rand_mail():
         word_num = alp[random.randint(0, int(len(alp) - 1))]
         return word_num
 
-    end_word = 'vova'
+    end_word = 'pythongang'
     cou = 0
     full = int(random.randint(5, 9))
     while cou != full:
@@ -71,7 +81,7 @@ def rand_mail():
         else:
             end_word += str(rand_word(lis_alp))
         cou += 1
-    end_word += '@kiq.kr'
+    end_word += '@kiq.ru'
     return end_word
 
 
@@ -83,9 +93,9 @@ def new_username():
         word_num = alp[random.randint(0, int(len(alp) - 1))]
         return word_num
 
-    end_word = ''
+    end_word = 'pythongang'
     cou = 0
-    full = int(random.randint(8, 12))
+    full = int(random.randint(4, 7))
     while cou != full:
         if cou == 4:
             end_word += 'var_pol'
@@ -142,3 +152,4 @@ while counter != accounts:
         file.close()
     else:
         print(f'Good, you created {counter} account!')
+    browser.quit()
