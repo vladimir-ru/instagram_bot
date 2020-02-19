@@ -3,7 +3,7 @@ import pyautogui
 import time
 from selenium import webdriver
 
-#browser = webdriver.Chrome('../chromedriver/chromedriver')
+browser = webdriver.Chrome('../chromedriver/chromedriver')
 
 # browser.get('https://temp-mail.org/')
 # time.sleep(5)
@@ -64,12 +64,12 @@ now_bot_info = file.read().split('\n')
 print(now_bot_info[0])
 file.close()'''
 
-
+'''
 file = open('bots_log.txt', 'r')
 now_bot_info = file.read().split('\n')
 pas_login = now_bot_info[0].split(', ')
 print(f'Password = {pas_login[0]}\nUsername = {pas_login[1]}')
-file.close()
+file.close()'''
 
 
 
@@ -108,7 +108,9 @@ create_mail()
 # 514 646
 # 501 719'''
 
-
+browser.get('https://www.instagram.com/var_poltos/')
+time.sleep(1)
+browser.find_element_by_tag_name('img').click()
 def check():
     cou = 0
     while cou != 2:

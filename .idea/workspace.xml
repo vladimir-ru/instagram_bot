@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21e320df-416f-4f60-b67b-d3c11968b2b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bots_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/bots_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/go_follow.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/go_follow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/instabot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/instabot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/register.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +50,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="445" y="203" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582025378795">
+    <state x="445" y="203" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582107662058">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="445" y="203" key="#com.intellij.fileTypes.FileTypeChooser/0.30.1366.738@0.30.1366.738" timestamp="1582025378795" />
+    <state x="445" y="203" key="#com.intellij.fileTypes.FileTypeChooser/0.30.1366.738@0.30.1366.738" timestamp="1582107662058" />
+    <state x="413" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582108488188">
+      <screen x="0" y="30" width="1366" height="738" />
+    </state>
+    <state x="413" y="147" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1366.738@0.30.1366.738" timestamp="1582108488188" />
     <state x="92" y="122" width="1182" height="554" key="DiffContextDialog" timestamp="1582055442073">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
     <state x="92" y="122" width="1182" height="554" key="DiffContextDialog/0.30.1366.738@0.30.1366.738" timestamp="1582055442073" />
-    <state x="379" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1582043252039">
+    <state x="379" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1582062840484">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
-    <state x="379" y="224" key="com.intellij.ide.util.TipDialog/0.30.1366.738@0.30.1366.738" timestamp="1582043252039" />
+    <state x="379" y="224" key="com.intellij.ide.util.TipDialog/0.30.1366.738@0.30.1366.738" timestamp="1582062840484" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1582012640458">
       <screen x="0" y="30" width="1366" height="738" />
     </state>
